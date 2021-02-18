@@ -9,11 +9,11 @@ app = Flask(__name__)
 
 
 # 装饰器将路由映射到视图index
-@app.route('/')
+@app.route('/hello')
 def index():
     return "hello world"
 
 
 if __name__ == '__main__':
     # Flask 应用程序实例的方法run启动web服务器
-    app.run(debug=True)
+    app.run(host='0.0.0.0',debug=True)
